@@ -118,6 +118,7 @@ class geogrid:
     self._index["isurban"        ] = None
     self._index["isoilwater"     ] = None
     self._index["mminlu"         ] = None
+    self._index["missing_value"         ] = None
 
   def __read_model_error(self):
     read_model = ["read", "r"]
