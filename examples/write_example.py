@@ -18,7 +18,7 @@ out.set_index(key="type"        , value="categorical")
 out.set_index(key="signed"      , value=np_isigned(data.dtype))
 out.set_index(key="endian"      , value=np_byteorder(data.dtype))
 out.set_index(key="category_min", value=1)
-out.set_index(key="category_min", value=20)
+out.set_index(key="category_max", value=20)
 out.set_index(key="projection"  , value="regular_ll")
 out.set_index(key="dx"          , value=geotranform[1])
 out.set_index(key="dy"          , value=abs(geotranform[5]))
@@ -36,7 +36,7 @@ out.set_index(key="mminlu"      , value="\"MODIFIED_IGBP_MODIS_NOAH\"")
 out.set_index(key="iswater"     , value=17)
 out.set_index(key="isice"       , value=15)
 out.set_index(key="isurban"     , value=13)
-
+out.set_index(key="missing_value"     , value=0)
 index_root = "./"
 
 out.write_geogrid(data, index_root=index_root)
